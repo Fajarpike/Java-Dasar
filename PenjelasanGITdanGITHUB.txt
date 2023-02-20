@@ -1,0 +1,80 @@
+Penjelasan GIT dan GITHUB
+TOKEN GITHUB(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)
+
+1.Git adalah VCS (Version Control System)
+Sistem penyimpanan yang menyimpan dan mengelola rekaman perubahan dari 
+source code.
+2. GIT
+Salah satu software yang bisa melakukan VCS
+3. GITHUB
+Website / layanan untuk mengelola project GIT
+
+--> ISTILAH GITHUB <--
+1. repo = folder project kita
+2. commit = rekaman / snapshot dari repo kita
+3. hash = penanda unik pada sebuha commit 
+4. checkout = berpindah ke sebuah commit misalkan mundur ke sebuah commit
+5. branch = cabang bebas dari sebuah commit
+6. merge = menggabungkan branch
+7. remote = sumber yang memiliki repo
+8. clone =  mengambil repo dari remote
+9. push = mengirimkan commit 
+10. pull = mengambil commit dari repo.
+11. forking = duplicate / copy repo orang lain beserta history commit nya
+
+pull request karena secara default meskipun kita melakukanny sendiri
+kalo kita bikin branch harus minta ijin terlebih dahulu pada yang punya repo
+agar branch nya bisa masuk
+
+--> GIT <--
+- 3 area pada repo GIT
+1. Working tree = folder tempat projek disimpan
+2. staging area = memberi informasi jika ada perubahan
+3. History = adalah history dari perubahan file 
+
+-->Perintah GIT<--
+1. git init = membuat repository
+2. git status = untuk melihat status mana yang belum di add
+3. git add namaFile = untuk menambahkan file ke staging
+4. git commit -m "pesan nya apa" = yaitu mengcommit dengan pesan yang diberikan
+5. git checkout 5angka awal hash --namafile.js = mengembalikan pada suatu keadaan dimana file belum dihapus
+6. git commit -a(add) -m(modified) "pesannya apa"
+7. git branch namaBranch = untuk membuat branch
+8. git log --all --decorate --oneline --graph = maka akan menampilkan visualisasi nya seperti di github
+9. git checkout namaBranch = cara untuk berpindah branch
+
+
+-->Jenis Merge<--
+Merge adalah suatu cara untuk menggabungkan branch dengan master
+
+1. Fast Forward = terjadi ketika branch yang kita ingin gabungkan berada dalam
+jalur langsung (direct path).
+----->Cara Merge Fast Forward<------
+Kita pindahkan dulu Head nya ke master dengan cara checkout dari branch
+1. git merge namaBranch = cara menggabungkan branch dengan master
+2. git branch -d namaBranch = cara untuk menghapus branch
+3. git branch --merged = cara untuk mengetahui branch mana yang sudah di merge(digabungkan).
+
+
+2. Three-Way Merge
+----->Cara Three-Way-Merge<------
+1. git merge namaBranch
+
+
+--->BAB GITHUB<---
+Menghubungkan antara GIT dengan GITHUB
+1. git clone url (url yang ingin di clone) = untuk menduplicate repo yang ada di github
+2. git remote = secara default remote itu harus punya nama yaitu origin
+3. git remote -v(verbous) = melihat data secara detail.
+	- ada fetch
+	- push
+4. git config --list = untuk melihat list
+5. git push = untuk menambahkan file ke web repository github
+6. git remote add origin (nama urlnya) = membuat remote baru
+7. git remote -v = untuk mengecek alamat
+8. git push -u origin mater = memasukan kode git dilocal ke github
+9. git fetch = mengecek repo yang ada di remote udah sampaimana commit nyaa
+10. git pull = untuk menarik repo yang ada di github
+11. git fetch namaRemote = berfungsi untuk melihat repository yang berbeda dan menampilkan dalam graph
+
+
